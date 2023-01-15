@@ -1,0 +1,70 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Music",
+      "data": [
+        {
+          "name": "Random Video",
+          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
+        },
+        {
+          "name": "Random Video",
+          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
+        },
+        {
+          "name": "Random Video",
+          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
+        },
+        {
+          "name": "Random Video",
+          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoryName": "education",
+      "data": [
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoryName": "think",
+      "data": [
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        },
+        {
+          "name": "Educational Video",
+          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
+        }
+      ]
+    }
+  ]
+}
