@@ -1,5 +1,7 @@
 import React from 'react'
 import Category from './Category'
+import { Layout, Menu } from 'antd'
+const { Header, Content, Footer } = Layout;
 
 const data = [
   {
@@ -45,7 +47,7 @@ const data = [
     ]
   },
   {
-    categoryName: "think", 
+    categoryName: "think",
     data: [
       {
         name: 'Educational Video',
@@ -69,19 +71,26 @@ const data = [
 
 const Home = () => {
   return (
-    <>
-      <h1>Convin</h1>
-      <div style={{
-        display: 'flex',
-        alignItems: 'baseline',
-        justifyContent: 'center',
-        gap: '15px'
-      }}>
-        {data.map(category => 
-          (<Category name={category.categoryName} data={category.data} />)
-        )}
-      </div>
-    </>
+    <Layout>
+      <Header>
+        <span style={{ color: 'whitesmoke', fontSize: '25px', fontWeight: 'bold' }}>Convin</span>
+      </Header>
+      <Content>
+        <div style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          justifyContent: 'center',
+          gap: '15px',
+          minHeight: "280px",
+          paddingTop: "24px"
+        }}>
+          {data.map(category =>
+            (<Category name={category.categoryName} data={category.data} />)
+          )}
+        </div>
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>©2023 Created by Shubham</Footer>
+    </Layout>
   )
 }
 
