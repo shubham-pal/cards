@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Category from "./Category";
-import { Layout, Spin } from "antd";
+import Spinner from "./Spinner";
+import { Layout } from "antd";
 const { Header, Content, Footer } = Layout;
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
-  const [showLoader, setShowLoader] = useState(true);
+  const [showSpinner, setShowSpinner] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/categories")
@@ -13,11 +14,11 @@ const Home = () => {
       .then((json) => {
         setCategories(json);
         setTimeout(() => {
-          setShowLoader(false);
-        }, 3000);
+          setShowSpinner(false);
+        }, 1500);
       })
       .catch((err) => console.log("unable to get categories", err));
-  });
+  }, []);
 
   return (
     <Layout>
@@ -29,10 +30,8 @@ const Home = () => {
         </span>
       </Header>
       <Content>
-        {showLoader ? (
-          <div style={{ height: '88vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Spin size="large" tip="Loading" />
-          </div>
+        {showSpinner ? (
+          <Spinner />
         ) : (
           <div
             style={{
@@ -45,7 +44,7 @@ const Home = () => {
             }}
           >
             {categories.map((category) => (
-              <Category name={category.categoryName} data={category.data} />
+              <Category key={category.id} name={category.name} id={category.id} />
             ))}
           </div>
         )}

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Modal, Card } from "antd";
 import { EditTwoTone, DeleteTwoTone } from "@ant-design/icons";
 
-const DetailCard = ({ index, video, deleteCard }) => {
+const DetailCard = ({ video, deleteCard }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardActions = [
-    <EditTwoTone />, <DeleteTwoTone onClick={() => deleteCard(index)}  />
+    <EditTwoTone />, <DeleteTwoTone onClick={() => deleteCard(video)}  />
   ];
   return (
     <>

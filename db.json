@@ -2,69 +2,35 @@
   "categories": [
     {
       "id": 1,
-      "categoryName": "Music",
-      "data": [
-        {
-          "name": "Random Video",
-          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
-        },
-        {
-          "name": "Random Video",
-          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
-        },
-        {
-          "name": "Random Video",
-          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
-        },
-        {
-          "name": "Random Video",
-          "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o"
-        }
-      ]
+      "name": "Music"
     },
     {
       "id": 2,
-      "categoryName": "education",
-      "data": [
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        }
-      ]
+      "name": "education"
     },
     {
       "id": 3,
-      "categoryName": "think",
-      "data": [
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        },
-        {
-          "name": "Educational Video",
-          "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y"
-        }
-      ]
+      "name": "think"
+    }
+  ],
+  "videos": [
+    {
+      "id": 2,
+      "name": "Random Video",
+      "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Random Video",
+      "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Educational Video",
+      "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y",
+      "categoryId": 3
     }
   ]
 }
