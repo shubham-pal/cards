@@ -9,7 +9,7 @@ const DetailCard = ({ video, deleteCard }) => {
   ];
   return (
     <>
-      <Card actions={cardActions} hoverable size="small">
+      <Card actions={cardActions} hoverable size="small" draggable>
         <div onClick={() => setIsModalOpen(true)}>
           <h3>{video.name}</h3>
           <p>

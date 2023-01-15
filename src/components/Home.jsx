@@ -13,9 +13,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((json) => {
         setCategories(json);
-        setTimeout(() => {
-          setShowSpinner(false);
-        }, 1500);
+        setShowSpinner(false);
       })
       .catch((err) => console.log("unable to get categories", err));
   }, []);
@@ -29,9 +27,9 @@ const Home = () => {
           Convin
         </span>
       </Header>
-      <Content>
+      <Content style={{ backgroundColor: '#1677ff', minHeight: "87vh" }}>
         {showSpinner ? (
-          <Spinner />
+          <Spinner fullHeight />
         ) : (
           <div
             style={{
@@ -40,7 +38,7 @@ const Home = () => {
               justifyContent: "center",
               gap: "15px",
               minHeight: "280px",
-              paddingTop: "24px",
+              padding: "24px 0px",
             }}
           >
             {categories.map((category) => (
@@ -49,7 +47,7 @@ const Home = () => {
           </div>
         )}
       </Content>
-      <Footer style={{ textAlign: "center" }}>©2023 Created by Shubham</Footer>
+      <Footer style={{ textAlign: "center", position: 'absolute', bottom: 0, width: "100%" }}>©2023 Created by Shubham</Footer>
     </Layout>
   );
 };

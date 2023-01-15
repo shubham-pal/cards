@@ -1,11 +1,11 @@
 import React from "react";
 import { Spin } from 'antd';
 
-const Spinner = () => {
+const Spinner = ({ fullHeight }) => {
   return (
     <div
       style={{
-        height: "88vh",
+        minHeight: fullHeight ? '88vh' : 'auto',
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
