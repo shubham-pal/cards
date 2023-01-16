@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Music"
+    },
+    {
+      "id": 2,
+      "name": "education"
+    },
+    {
+      "id": 3,
+      "name": "think"
+    }
+  ],
+  "videos": [
+    {
+      "id": 2,
+      "name": "Random Video",
+      "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o",
+      "categoryId": 2
+    },
+    {
+      "id": 1,
+      "name": "New Video",
+      "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o",
+      "categoryId": 2
+    },
+    {
+      "id": 3,
+      "name": "Random Video",
+      "videoUrl": "https://www.youtube.com/embed/An_DFdNow9o",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Educational Video",
+      "videoUrl": "https://www.youtube.com/embed?v=b0IZo2Aho9Y",
+      "categoryId": 3
+    }
+  ]
+}

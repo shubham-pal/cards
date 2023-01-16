@@ -1,8 +1,9 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 
-const App = () => {
+const AddForm = ({ formData, onFormSubmit }) => {
   const onFinish = (values) => {
+    onFormSubmit(values);
     console.log('Success:', values);
   };
 
@@ -21,23 +22,27 @@ const App = () => {
       autoComplete="off"
     >
       <Form.Item
-        label="Username"
-        name="username"
-        rules={[{ required: true, message: 'Please input your username!' }]}
+        label="Title"
+        name="title"
+        rules={[{ required: true, message: 'Please input title!' }]}
       >
-        <Input />
+        <Input value={formData.title || ''} />
       </Form.Item>
 
       <Form.Item
-        label="Password"
-        name="password"
-        rules={[{ required: true, message: 'Please input your password!' }]}
+        label="Description"
+        name="description"
+        rules={[{ required: true, message: 'Please input description!' }]}
       >
-        <Input.Password />
+        <Input value={formData.description || ''} />
       </Form.Item>
 
-      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-        <Checkbox>Remember me</Checkbox>
+      <Form.Item
+        label="Video URL"
+        name="videoUrl"
+        rules={[{ required: true, message: 'Please input video URL!' }]}
+      >
+        <Input value={formData.videoUrl || ''} />
       </Form.Item>
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
@@ -49,4 +54,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default AddForm;

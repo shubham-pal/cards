@@ -2,20 +2,22 @@ import React, { useState } from "react";
 import { Modal, Card } from "antd";
 import { EditTwoTone, DeleteTwoTone } from "@ant-design/icons";
 
-const DetailCard = ({ video, deleteCard }) => {
+const DetailCard = (props) => {
+  const { video, deleteCard } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cardActions = [
-    <EditTwoTone />, <DeleteTwoTone onClick={() => deleteCard(video)}  />
+    <EditTwoTone />,
+    <DeleteTwoTone onClick={() => deleteCard(video)} />,
   ];
   return (
     <>
-      <Card actions={cardActions} hoverable size="small" draggable>
+      <Card actions={cardActions} hoverable size="small">
         <div onClick={() => setIsModalOpen(true)}>
           <h3>{video.name}</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            voluptatum eum possimus quo, fuga maiores. Ducimus nihil natus
-            officiis ullam!
+            {video.description ? video.description : `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus soluta libero ex nam rem deleniti eum laudantium
+            aperiam at tempore!`}
           </p>
         </div>
       </Card>
@@ -23,10 +25,18 @@ const DetailCard = ({ video, deleteCard }) => {
         title={video.name}
         open={isModalOpen}
         onCancel={() => setIsModalOpen(false)}
-        width='1000px'
-        cancelText='Close'
+        width="1000px"
+        cancelText="Close"
       >
-       <iframe height='500px' width='950px' src={video.videoUrl} title="Tu Hi Meri Shab Hai - Full 4K Video Song | K.K | Gangster | Emraan H, Kangna R | Hitz Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> 
+        <iframe
+          height="500px"
+          width="950px"
+          src={video.videoUrl}
+          title={video.name}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </Modal>
     </>
   );
